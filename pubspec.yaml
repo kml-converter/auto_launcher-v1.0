@@ -1,0 +1,43 @@
+name: auto_launcher
+description: Car Launcher per Android 12
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Pacchetto ibrido per la sveglia vocale offline
+  http: ^1.2.0
+  xml: ^6.5.0
+  flutter_wake_word: ^0.0.4
+
+
+
+
+
+
+
+
+  flutter_map: ^6.1.0
+  latlong2: ^0.9.1
+  shared_preferences: ^2.3.5
+  url_launcher: ^6.3.1
+  just_audio: ^0.9.45
+  android_intent_plus: ^5.0.2
+  speech_to_text: ^6.6.2
+  geolocator: ^11.1.0
+  video_player: ^2.8.2
+  flutter_bluetooth_serial: ^0.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/radios.json
