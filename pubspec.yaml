@@ -12,14 +12,6 @@ dependencies:
   http: ^1.2.0
   xml: ^6.5.0
   flutter_wake_word: ^0.0.4
-
-
-
-
-
-
-
-
   flutter_map: ^6.1.0
   latlong2: ^0.9.1
   shared_preferences: ^2.3.5
@@ -41,3 +33,7 @@ flutter:
 
   assets:
     - assets/radios.json
+    - assets/sole_3d.png
+    - assets/sole_nuvola_3d.png
+    - assets/nuvola_3d.png
+    - assets/temporale_3d.png
