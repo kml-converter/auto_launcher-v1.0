@@ -21,11 +21,11 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      # 3. Configura l'SDK di Flutter
+      # 3. Configura l'SDK di Flutter aggiornato (Risolve il problema di Dart SDK)
       - name: Configura Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.x' # Versione stabile compatibile con il tuo SDK target
+          flutter-version: '3.22.x' # Aggiornato per sbloccare just_audio e audio_session
           channel: 'stable'
           cache: true
 
