@@ -1,4 +1,4 @@
-import java.util.Properties // IMPORTAZIONE MANCANTE CORRETTA
+import java.util.Properties
 
 plugins {
     id("com.android.application")
@@ -19,7 +19,7 @@ val flutterVersionName = localProperties.getProperty("flutter.versionName") ?: "
 
 android {
     namespace = "com.example.auto_launcher"
-    compileSdk = 33
+    compileSdk = 34
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -37,7 +37,7 @@ android {
     defaultConfig {
         applicationId = "com.example.auto_launcher"
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
         versionCode = flutterVersionCode.toInt()
         versionName = flutterVersionName
     }
@@ -56,5 +56,5 @@ flutter {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.22")
 }
