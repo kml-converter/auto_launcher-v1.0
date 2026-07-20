@@ -13,7 +13,7 @@ jobs:
       - name: Checkout del codice
         uses: actions/checkout@v4
 
-       Sir- name: Configura Java
+      - name: Configura Java
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
@@ -28,7 +28,6 @@ jobs:
       - name: Installa dipendenze (Pub Get)
         run: flutter pub get
 
-      # Aggiunto il flag --android-skip-build-dependency-validation per saltare i controlli rigidi delle versioni Gradle
       - name: Compilazione APK Release
         run: flutter build apk --release --android-skip-build-dependency-validation
 
