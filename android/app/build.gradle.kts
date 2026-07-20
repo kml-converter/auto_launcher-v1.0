@@ -1,3 +1,5 @@
+import java.util.Properties // IMPORTAZIONE MANCANTE CORRETTA
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -43,7 +45,6 @@ android {
     buildTypes {
         getByName("release") {
             signingConfig = signingConfigs.getByName("debug")
-            // CORRETTO: Nelle nuove versioni di Gradle Kotlin DSL si scrive in questo modo
             isMinifyEnabled = false
             isShrinkResources = false
         }
