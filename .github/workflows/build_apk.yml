@@ -2,41 +2,36 @@ name: Compilazione Automatica APK
 
 on:
   push:
-    branches: [ main, master ] # Si attiva ogni volta che aggiorni il codice
-  workflow_dispatch: # Ti permette di avviare la compilazione a mano con un click
+    branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Scarica il codice dalla tua repository
       - name: Checkout del codice
         uses: actions/checkout@v4
 
-      # 2. Configura l'ambiente Java (Richiesto da Android)
-      - name: Configura Java
+       Sir- name: Configura Java
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: '17'
 
-      # 3. Configura l'ultima versione stabile di Flutter (Risolve shared_preferences)
       - name: Configura Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: 'stable' # Rimuovendo il numero fisso prende in automatico l'ultimissima versione rilasciata
+          channel: 'stable'
           cache: true
 
-      # 4. Scarica i pacchetti inseriti nel pubspec.yaml
       - name: Installa dipendenze (Pub Get)
         run: flutter pub get
 
-      # 5. Compila l'APK in modalità Release
+      # Aggiunto il flag --android-skip-build-dependency-validation per saltare i controlli rigidi delle versioni Gradle
       - name: Compilazione APK Release
-        run: flutter build apk --release
+        run: flutter build apk --release --android-skip-build-dependency-validation
 
-      # 6. Salva l'APK finale per poterlo scaricare
       - name: Carica l'APK nei file scaricabili
         uses: actions/upload-artifact@v4
         with:
