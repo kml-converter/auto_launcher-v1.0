@@ -2,7 +2,7 @@ import java.util.Properties
 
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
     id("dev.flutter.flutter-gradle-plugin")
 }
 
@@ -53,12 +53,4 @@ android {
 
 flutter {
     source = "../.."
-}
-
-dependencies {
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    // Explicit Flutter embedding dependency for Kotlin compilation
-    compileOnly(files(System.getenv("FLUTTER_ROOT")?.let { "$it/bin/cache/dart-sdk" } ?: "."))
-    compileOnly(files("${rootProject.projectDir.parent}/Flutter/flutter/bin/cache/dart-sdk"))
 }
