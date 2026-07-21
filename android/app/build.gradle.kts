@@ -56,5 +56,5 @@ flutter {
 }
 
 dependencies {
-    implementation("io.flutter:flutter_embedding_release:1.0.0")
+    // Flutter dependencies are automatically handled by the flutter gradle plugin
 }
