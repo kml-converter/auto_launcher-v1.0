@@ -58,4 +58,7 @@ flutter {
 dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    // Explicit Flutter embedding dependency for Kotlin compilation
+    compileOnly(files(System.getenv("FLUTTER_ROOT")?.let { "$it/bin/cache/dart-sdk" } ?: "."))
+    compileOnly(files("${rootProject.projectDir.parent}/Flutter/flutter/bin/cache/dart-sdk"))
 }
