@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://google.com"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.auto_launcher">
 
     <!-- Permessi hardware per il corretto funzionamento sul tablet -->
