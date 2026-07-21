@@ -51,4 +51,10 @@ android {
     }
 }
 
-// Rimosso il blocco flutter errato poiché autogestito dal plugin
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Flutter dependencies are automatically added by the flutter gradle plugin
+}
