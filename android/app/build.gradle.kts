@@ -2,7 +2,7 @@ import java.util.Properties
 
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android") // Corretto
+    id("org.jetbrains.kotlin.android")
     id("dev.flutter.flutter-gradle-plugin")
 }
 
@@ -44,7 +44,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            signingConfig = signingConfigs["debug"] // Corretto
+            signingConfig = signingConfigs["debug"]
             isMinifyEnabled = false
             isShrinkResources = false
         }
@@ -56,5 +56,5 @@ flutter {
 }
 
 dependencies {
-    // Flutter dependencies are automatically added by the flutter gradle plugin
+    implementation("io.flutter:flutter_embedding_release:1.0.0")
 }
