@@ -2,7 +2,7 @@ import java.util.Properties
 
 plugins {
     id("com.android.application")
-    id("kotlin-android")
+    id("org.jetbrains.kotlin.android") // Corretto
     id("dev.flutter.flutter-gradle-plugin")
 }
 
@@ -44,13 +44,11 @@ android {
 
     buildTypes {
         getByName("release") {
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs["debug"] // Corretto
             isMinifyEnabled = false
             isShrinkResources = false
         }
     }
 }
 
-flutter {
-    source = "../.."
-}
+// Rimosso il blocco flutter errato poiché autogestito dal plugin
