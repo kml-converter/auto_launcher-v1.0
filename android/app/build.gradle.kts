@@ -56,5 +56,6 @@ flutter {
 }
 
 dependencies {
-    // Flutter dependencies are automatically handled by the flutter gradle plugin
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 }
