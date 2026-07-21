@@ -2,6 +2,9 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = java.net.URI("https://storage.googleapis.com/download.flutter.io")
+        }
     }
 }
 
