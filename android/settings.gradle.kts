@@ -8,8 +8,9 @@ pluginManagement {
         
         System.getenv("FLUTTER_ROOT")
             ?: properties.getProperty("flutter.sdk")
-            ?: throw GradleException("Flutter SDK non trovato. Imposta FLUTTER_ROOT o flutter.sdk")
+            ?: throw GradleException("Flutter SDK non trovato")
     }
+    
     includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
     
     repositories {
